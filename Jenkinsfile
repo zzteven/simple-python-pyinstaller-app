@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'python:3.11-rc-bullseye'
-            args '-p 4000:4000'
+            image 'qnib/pytest'
         }
     }
     stages {
@@ -12,6 +12,11 @@ pipeline {
             }
         }
         stage('Test') { 
+            agent {
+                docker {
+                    image 'qnib/pytest'
+                }
+            }
             steps {
                 sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
             }
