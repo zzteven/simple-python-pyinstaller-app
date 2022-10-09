@@ -1,7 +1,7 @@
 node {
     withDockerContainer(image: 'python:3.11-rc-bullseye') {
         stage('Build') {
-            sh 'python -m py_compile sources/add2vals.py sources/calc.py sources/tests.py'
+            sh 'python -m py_compile sources/add2vals.py sources/calc.py sources/testss.py'
         }
     }
     withDockerContainer(image: 'qnib/pytest') {
