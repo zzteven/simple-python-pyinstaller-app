@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test') { 
             steps {
-                sh './jenkins/scripts/test.sh' 
+                sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
             }
         }
     }
