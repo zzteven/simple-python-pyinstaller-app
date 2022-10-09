@@ -15,7 +15,7 @@ if argnumbers == 2 :
     sys.exit(0)
 
 if argnumbers != 2 :
-    print("")
+    print("lancyau")
     print("You entered " + str(argnumbers) + " value/s.")
     print("")
     print("Usage: 'add2vals X Y' where X and Y are individual values.")
